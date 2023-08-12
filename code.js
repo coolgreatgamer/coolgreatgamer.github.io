@@ -62,7 +62,7 @@ function draw() {
   enemy.collide(lava, enemydie)
   function enemydie(enemy) {
     enemy.remove();
-    alert("enemy touched lava")
+    //alert("enemy touched lava")
   }
 
 
@@ -70,7 +70,7 @@ function draw() {
   player.collide(enemy, lose);
   function lose(player) {
     player.remove();
-    alert("nice try!")
+    alert("game over!")
   }  
 //if you touch the enemy it will alert "nice try!"
   

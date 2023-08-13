@@ -27,8 +27,11 @@ function setup() {
 	player = new Sprite(width/2, height/2, playerSize, playerSize);
   player.addImage(playerImg);
   //
-  lava =new Sprite(width/2, height/2, 16, 64);
-  lava.addImage(lavaImg);
+  lava =new Sprite(width/2, 500, 1000000, 4);
+  //lava.addImage(lavaImg);
+  lava.mass = 2000;
+  lava.collider = 'static';
+
   //
   enemy = new Sprite(100, 100, enemySize, enemySize);
   enemy.addImage(enemyImg);
@@ -64,6 +67,13 @@ function draw() {
     enemy.remove();
     //alert("enemy touched lava")
   }
+  
+
+  player.collide(lava, bruhdie);
+  function bruhdie(player) {
+    player.remove();
+    alert("game over!")
+  }  
 
 
 

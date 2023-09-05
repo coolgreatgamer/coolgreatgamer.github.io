@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1>Hi welcome to my website! use the arrow keys to move. press down to turn off gravity.<h1>
+    <h2>Don't touch the floor!<h2>
+        
+    <title>test</title>
+    <script>let sprite;
+
+        function setup() {
+            new Canvas(500, 100);
+            sprite = new Sprite();
+        }
+        
+        function draw() {
+            clear();
+            sprite.color = 'yellow';
+        
+            if (mouse.pressing()) sprite.color = 'red';
+        
+            if (sprite.mouse.hovering()) sprite.color = 'blue';
+        
+            if (sprite.mouse.pressing()) sprite.color = 'green';
+        
+            if (sprite.mouse.dragging()) {
+                sprite.moveTowards(
+                    mouse.x + sprite.mouse.x,
+                    mouse.y + sprite.mouse.y,
+                    1 // full tracking
+                );
+            }
+        }</script>
+    <script src="https://cdn.jsdelivr.net/npm/planck@latest/dist/planck-with-testbed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+    <script src="https://p5play.org/v3/p5play.js"></script>
+    
+
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        </script>
+    <script src="code.js"></script>
+</html>

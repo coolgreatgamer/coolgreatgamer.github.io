@@ -9,11 +9,16 @@ let enemyImg;
 let enemy;
 let enemySize = 32;
 let canvasSize = 600;
-
+let mySound;
+let Lavender_Town;
+function preload() {
+  soundFormats('mp3', 'ogg');
+  mySound = loadSound('assets/doorbell');
+}
 let speed = 5;
 
 function setup() {
-  world.gravity.y = 5;
+  world.gravity.y = 10;
 	floor = new Sprite(10, 500, 1500, 4, 's');
   floor = new Sprite(10, 400, 900, 4, 's');
   floor = new Sprite(10, 300, 700, 4, 's');
@@ -62,6 +67,7 @@ function makeEnemyFollow(value, index, array)
 }
 
 function draw() {
+  mouse.visible = false;
   enemy.collide(lava, enemydie)
   function enemydie(enemy) {
     enemy.remove();
@@ -83,6 +89,7 @@ function draw() {
     alert("game over!")
   }  
 //if you touch the enemy it will alert "nice try!"
+
   
   background("black");
   //drawSprites();
@@ -93,6 +100,7 @@ function draw() {
 
 
   if (kb.presses('space')) {
+    
     enemy = new Sprite(100, 100, enemySize, enemySize);
     enemy.addImage(enemyImg);
 
@@ -105,21 +113,21 @@ function draw() {
     player.position.x += speed;
     if (player.position.x > canvasSize - playerSize / 2) {
       player.position.x = canvasSize - playerSize / 2;
-      world.gravity.y = 5;
+      world.gravity.y = 10;
     }
   } 
   if (kb.pressing(LEFT_ARROW)) {
     player.position.x -= speed;
     if (player.position.x < playerSize / 2) {
       player.position.x = playerSize / 2;
-      world.gravity.y = 5;
+      world.gravity.y = 10;
     }
 
   } 
   if (kb.pressing(DOWN_ARROW)) { 
     player.position.y += speed;
      //disabeled due to the type of game.
-     world.gravity.y = 0
+     world.gravity.y = 10;
 
      if (player.position.y > 600) {
       player.position.y = 600;
@@ -130,7 +138,7 @@ function draw() {
     player.position.y -= speed;
     if (player.position.y < playerSize / 2) {
       player.position.y = playerSize / 2;
-      world.gravity.y = 5;
+      world.gravity.y = 10;
     }
   }
  
@@ -166,13 +174,22 @@ function preload() {
   playerImg = loadImage("player.png")
   enemyImg = loadImage("enemy.png")
   lavaImg = loadImage("lava.png")
-
+  //soundFormats('mp3', 'ogg');
+  Lavender_Town = loadSound('Lavender_Town.ogg');
+  //Lavender_Town.play([0.5])
 }
 
 
 function keyPressed() {
-
+if (kb.pressing('a')) {
+	Lavender_Town.play([0.5])
+  alert("uhh nice job finding this idk")
+  a
 }
+}
+
+
+
 
 
 

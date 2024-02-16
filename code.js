@@ -184,7 +184,7 @@ function keyPressed() {
 if (kb.pressing('a')) {
 	Lavender_Town.play([0.5])
   alert("uhh nice job finding this idk")
-2
+iuoerrhgir
 }
 }
 

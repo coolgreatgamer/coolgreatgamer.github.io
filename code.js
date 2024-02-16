@@ -175,7 +175,7 @@ function preload() {
   enemyImg = loadImage("enemy.png")
   lavaImg = loadImage("lava.png")
   //soundFormats('mp3', 'ogg');
-  Lavender_Town = loadSound('Lavender_Town.ogg');
+  Lavender_Town = loadSound('Lavender_Town.mp3');
   //Lavender_Town.play([0.5])
 }
 
@@ -184,7 +184,7 @@ function keyPressed() {
 if (kb.pressing('a')) {
 	Lavender_Town.play([0.5])
   alert("uhh nice job finding this idk")
-  a
+2
 }
 }
 

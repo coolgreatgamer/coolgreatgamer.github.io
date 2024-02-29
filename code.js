@@ -18,6 +18,7 @@ function preload() {
 let speed = 5;
 
 function setup() {
+
   world.gravity.y = 10;
 	floor = new Sprite(10, 500, 1500, 4, 's');
   floor = new Sprite(10, 400, 900, 4, 's');
@@ -87,6 +88,7 @@ function draw() {
   function lose(player) {
     player.remove();
     alert("game over!")
+    //console.error(BrokenGameHaha);
   }  
 //if you touch the enemy it will alert "nice try!"
 
@@ -95,13 +97,13 @@ function draw() {
   //drawSprites();
   
   //makeEnemyFollow();
-
+ 
   mcs.forEach(makeEnemyFollow);
 
 
   if (kb.presses('space')) {
-    
-    enemy = new Sprite(100, 100, enemySize, enemySize);
+
+    enemy = new Sprnoite(100, 100, enemySize, enemySize);
     enemy.addImage(enemyImg);
 
     //alert(enemy);
@@ -145,7 +147,11 @@ function draw() {
     }
   }
  
-  
+  if (kb.pressing('=')) {
+  stop()
+  alert("good job you broke game")
+  console.error(BrokenGameHaha);
+}
 
 
 
@@ -187,12 +193,11 @@ function keyPressed() {
 if (kb.pressing('a')) {
 	Lavender_Town.play([0.5])
   alert("uhh nice job finding this idk")
-iuoerrhgir
+  alert("don't press = ")
+
+
 }
 }
-
-
-
 
 
 

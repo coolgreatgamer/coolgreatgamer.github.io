@@ -109,6 +109,9 @@ function draw() {
     mcs.push(enemy);    
   }
 
+  if (kb.pressing('q')) enemy.rotation = 180;
+  else enemy.rotation = 0;
+
   if (kb.pressing(RIGHT_ARROW)) {
     player.position.x += speed;
     if (player.position.x > canvasSize - playerSize / 2) {

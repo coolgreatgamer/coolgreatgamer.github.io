@@ -103,7 +103,7 @@ function draw() {
 
   if (kb.presses('space')) {
 
-    enemy = new Sprnoite(100, 100, enemySize, enemySize);
+    enemy = new Sprite(100, 100, enemySize, enemySize);
     enemy.addImage(enemyImg);
 
     //alert(enemy);

@@ -150,7 +150,57 @@ function draw() {
     }
 
   }
+
+if (contro.pressing('a')){     player.position.y += speed;
+//disabeled due to the type of game.
+world.gravity.y = 10;
+
+if (player.position.y > 600) {
+ player.position.y = 600;
  
+}
+alert("DOWN PRESSED")
+}
+
+;//down
+
+
+
+
+if (contro.pressing('b')){     player.position.x += speed;
+if (player.position.x > canvasSize - playerSize / 2) {
+  player.position.x = canvasSize - playerSize / 2;
+  world.gravity.y = 10};
+}
+//right
+
+
+
+if (contro.pressing('x')){     player.position.x -= speed;
+if (player.position.x < playerSize / 2) {
+  player.position.x = playerSize / 2;
+  world.gravity.y = 10;
+}
+}
+
+;//left
+
+
+
+if (contro.pressing('y')){     world.gravity.y = 0;
+player.position.y -= speed;
+if (player.position.y < playerSize / 2) {
+  player.position.y = playerSize / 2;
+  
+}else {
+world.gravity.y = 10;    
+}
+}
+;//up
+
+
+
+
   if (kb.pressing('=')) {
   stop()
   alert("good job you broke game")

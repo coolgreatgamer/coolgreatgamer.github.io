@@ -140,11 +140,15 @@ function draw() {
     }
   } 
   if (kb.pressing(UP_ARROW)) {
+    world.gravity.y = 0;
     player.position.y -= speed;
     if (player.position.y < playerSize / 2) {
       player.position.y = playerSize / 2;
-      world.gravity.y = 10;
+      
+    }else {
+    world.gravity.y = 10;    
     }
+
   }
  
   if (kb.pressing('=')) {

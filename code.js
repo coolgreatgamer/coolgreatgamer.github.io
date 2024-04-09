@@ -196,7 +196,11 @@ if (player.position.y < playerSize / 2) {
 world.gravity.y = 10;    
 }
 }
-;//up
+;
+//up
+//                (x, y, tracking)
+//                (position, tracking)
+player.moveTowards(mouse, 0.02);
 
 
 

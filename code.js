@@ -13,7 +13,7 @@ let mySound;
 let Lavender_Town;
 function preload() {
   soundFormats('mp3', 'ogg');
-  mySound = loadSound('assets/doorbell');
+  //mySound = loadSound('assets/doorbell');
 }
 let speed = 5;
 
@@ -201,7 +201,7 @@ world.gravity.y = 10;
 //                (x, y, tracking)
 //                (position, tracking)
 player.moveTowards(mouse, 0.02);
-
+world.gravity.y = 10;   
 
 
 

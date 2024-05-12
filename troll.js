@@ -1,13 +1,18 @@
+let fs = fullscreen();
 
+function setup() {
+  new Canvas(500, 240);
+  //alert("test");
 
-alert("test");
- let fs = fullscreen();
- fullscreen(!fs);
+}
 
+function mousePressed() {
+   // if (kb.pressing('a')) {
+      let fs = fullscreen();
 
+      alert(fs);
 
-   if (kb.pressing('F11')) {
-     let fs = fullscreen();
-     fullscreen(!fs);
-   
-  } 
+      fullscreen(!fs);
+    
+//} 
+}
